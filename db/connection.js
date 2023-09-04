@@ -8,7 +8,7 @@ require('dotenv').config({
   path: path.resolve(__dirname, `../.env.${ENV}`),
 });
 
-console.log('Loaded DATABASE_URL:', process.env.DATABASE_URL);
+
 
 if (!process.env.PGDATABASE && !process.env.DATABASE_URL) {
   throw new Error('PGDATABASE & DATABASE_URL not set');
@@ -23,8 +23,6 @@ const config =
         },
       }
     : {};
-
-    console.log("Database config being used:", config);
 
 
 module.exports = new Pool(config);
