@@ -19,8 +19,20 @@ This backend API project serves data for various resources like topics, articles
 git clone https://github.com/jdwd40/nc-news-backend
 2. Install dependencies:
 
-cd yourreponame
+cd nc-news-backend
 npm install
+
+cd db/
+create .env.developmet and .env.test files
+```
+PGDATABASE=nc_news_api
+PGPASSWORD=********
+DATABASE_URL=postgresql://jd:******@localhost:5432/nc_news_api
+```
+
+run the setup.sql to create the databases
+
+run the run.seed.js file to seed database
 
 3. Start the server:
 
